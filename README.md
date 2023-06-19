@@ -1,6 +1,6 @@
 #Moon Calendar is basically a calendar which tells when in month will be full moon or new moon
 
-#Application is written using OOP in PHP
+#Application is written with OOP in PHP
 
 #Style is all made by me inspired on some interesting open source designs
 
