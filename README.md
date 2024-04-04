@@ -25,8 +25,8 @@ Forward >> - moving by one year
 
 Forward >>> - moving five years
 
-Back > - moving by one month
+Back < - moving by one month
 
-Back >> - moving by one year
+Back << - moving by one year
 
-Back >>> - moving five years
+Back <<< - moving five years
