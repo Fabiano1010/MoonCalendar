@@ -47,21 +47,21 @@ class Calendar
         return $year."-".$month;
     }
     private function newmoon(){
-            $newmoon_array = array();
-    //        nów początkowy
-            $newmoon = strtotime("1970-01-07 21:35:00");
+        $newmoon_array = array();
+//        nów początkowy
+        $newmoon = strtotime("1970-01-07 21:35:00");
 
+        array_push($newmoon_array, $newmoon);
+
+        for($i=0; $i<=775; $i++) {
+            $newmoon = $newmoon+2551443;//2505600+43200+2640+3=2551443
             array_push($newmoon_array, $newmoon);
-
-            for($i=0; $i<=775; $i++) {
-                $newmoon = $newmoon+2551443;//2505600+43200+2640+3=2551443
-                array_push($newmoon_array, $newmoon);
-            }
-            $newmoon_array_date = array();
-            foreach ($newmoon_array as $value) {
-                array_push($newmoon_array_date, date('Y-n-j', $value));
-            }
-            return $newmoon_array_date;
+        }
+        $newmoon_array_date = array();
+        foreach ($newmoon_array as $value) {
+            array_push($newmoon_array_date, date('Y-n-j', $value));
+        }
+        return $newmoon_array_date;
             
     }
     public function fullmoon(){
@@ -209,52 +209,16 @@ class Calendar
     }
     public function print_table($var)
     {
+        
         return $this->table($var);
 
     }
     private function ym($m,$var){
         date_default_timezone_set('Europe/Warsaw');
-        $n = $this->month($var);
+        $n = $this->month($var); 
         $n = explode("-",$n);
-        switch($n[1]){
-            case '1':
-                $m='Styczeń';
-                break;
-            case '2':
-                $m='Luty';
-                break;
-            case '3':
-                $m='Marzec';
-                break;
-            case '4':
-                $m='Kwiecień';
-                break;
-            case '5':
-                $m='Maj';
-                break;
-            case '6':
-                $m='Czerwiec';
-                break;
-            case '7':
-                $m='Lipiec';
-                break;
-            case '8':
-                $m='Sierpień';
-                break;
-            case '9':
-                $m='Wrzesień';
-                break;
-            case '10':
-                $m='Październik';
-                break;
-            case '11':
-                $m='Listopad';
-                break;
-            case '12':
-                $m='Grudzień';
-                break;
-        }
-
+        $months=['1'=>'Styczeń', '2'=>'Luty', '3'=>'Marzec','4'=>'Kwiecień','5'=>'Maj','6'=>'Czerwiec','7'=>'Lipiec','8'=>'Sierpierń','9'=>'Wrzesień','10'=>'Październik','11'=>'Listopad','12'=>'Grudzień'];
+        $m=$months[$n[1]];
         return $m."<br>".$n[0];
     }
     public function YearMonth($m, $var){
