@@ -7,8 +7,6 @@ Style is all made by me inspired on some interesting open source designs
 
 Calendar shows week days starting from Sunday
 
-Table head says in Polish Sunday (Niedziela) Monday (Poniedziałek) Tuesday (Wtorek) Wednesday (Środa) Thursday (Czwartek) Friday (Piątek) Saturday (Sobota)
-
 Current month and year is displayed on the down middle of the site
 
 Month name is in Polish
