@@ -126,7 +126,7 @@ class Calendar
         // nagłowek tabeli
         $t = "<div class='board2'><div class='days-head'>";
         $headers = "";
-        $days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
+        $days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         for ($i = 0; $i < $this->c; $i++) {
             $headers .= "<div class='days-headers'><h3>$days[$i]</h3></div>";
         }
