@@ -68,7 +68,7 @@ session_start();
                 <span class="s2"></span>
                 <span class="s3"></span>
                 <span class="s4"></span>
-                Dziś
+                Today
                 </button>
         </div>
         <button type="submit" class="btn  btn2 marg-r" id="next3" name="next3"><!--5 lat -->
