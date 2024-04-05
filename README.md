@@ -17,7 +17,7 @@ Today's date is displayed by purple shadow behide the appropriate cell of calend
 
 # There are seven buttons
 
-Today - (which says "Dziś" in Polish) goes back to today's date
+Today - goes back to today's date
 
 Forward > - moving by one month
 
