@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalendarz Fabian Skrzypczyński</title>
+    <title>Moon Calendar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
