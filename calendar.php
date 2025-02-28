@@ -49,11 +49,11 @@ class Calendar
     private function newmoon(){
         $newmoon_array = array();
 //        nów początkowy
-        $newmoon = strtotime("1970-01-07 21:35:00");
+        $newmoon = strtotime("1970-01-07 21:35:40");
 
         array_push($newmoon_array, $newmoon);
 
-        for($i=0; $i<=775; $i++) {
+        for($i=0; $i<=5000; $i++) {
             $newmoon = $newmoon+2551443;//2505600+43200+2640+3=2551443
             array_push($newmoon_array, $newmoon);
         }
@@ -67,11 +67,11 @@ class Calendar
     public function fullmoon(){
         $fullmoon_array = array();
 //        pełnia początkowa
-        $fullmoon = strtotime("1970-01-22 00:00:00");
+        $fullmoon = strtotime("1970-01-22 13:55:25");
 
         array_push($fullmoon_array, $fullmoon);
 
-        for($i=0; $i<=775; $i++) {
+        for($i=0; $i<=5000; $i++) {
             $fullmoon = $fullmoon+2551443;//2505600+43200+2640+3=2551443
             array_push($fullmoon_array, $fullmoon);
         }
@@ -189,13 +189,13 @@ class Calendar
                         }
                         else{ //jesli inaczej drukuj puste (na końcu)
 
-                            $parts .= "<div class='days'>";
+                            $parts .= "<div class='days-none'>";
                             $parts .= "<h4>" ."&nbsp". "</h4>";
                             $parts .= "</div>";
                         }
                     }
                     else{//jesli inaczej drukuj puste (na początku)
-                            $parts .= "<div class='days'>";
+                            $parts .= "<div class='days-none'>";
                             $parts .= "<h4>" ."&nbsp". "</h4>";
                             $parts .= "</div>";
                     }
@@ -219,7 +219,7 @@ class Calendar
         $n = explode("-",$n);
         $months=['1'=>'Styczeń', '2'=>'Luty', '3'=>'Marzec','4'=>'Kwiecień','5'=>'Maj','6'=>'Czerwiec','7'=>'Lipiec','8'=>'Sierpierń','9'=>'Wrzesień','10'=>'Październik','11'=>'Listopad','12'=>'Grudzień'];
         $m=$months[$n[1]];
-        return $m."<br>".$n[0];
+        return $m." ".$n[0];
     }
     public function YearMonth($m, $var){
         return $this->ym($m, $var);

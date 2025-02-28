@@ -7,7 +7,7 @@ body{
  background: rgb(0,21,57);
  background: linear-gradient(90deg, rgb(0, 16, 43) 0%, rgb(26, 66, 80) 50%, rgba(0, 16, 43) 100%);
  color: rgb(255, 255, 255);
- 
+ overflow: hidden;
 }
 .container{
     display: flex;
@@ -486,10 +486,10 @@ body{
   left: 3px;
   font-size: 13px;
 } 
-.marg{
-  margin-top: 40px;
+.marg-top-10{
+  margin-top: 10px;
 }
-.marg-20{
+.marg-top-20{
   margin-top: 15px;
 }
 .board{
@@ -692,32 +692,29 @@ pointer-events: none;
   font-weight: bold;
 
 }
-.board2 .days-head, .board2 .days-body{
+.days-head,.days-body, .days-none{
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-.board2 .days-body{
-  display: flex;
-  
-  width: 100%;
-  
-}
 
-.board2 .days-head .days-headers{
-  width: 440px;
-  margin: 10px;
+.days-headers{
   background: rgba(0, 0, 0, 0.753);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.692);
-  padding: 15px;
+  padding: 12px;
   border-radius: 10px;
   margin: 5px;
   transition: 0.5s;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.days{
-  width: 440px;
-  height: 80px;
+.days, .days-headers, .today,.days-none{
+  width: 48vw;
+  height: 7.5vh;
+}
+.days, .days-none{
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
   padding: 12px;
@@ -727,11 +724,13 @@ pointer-events: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .days .today h4{
   position: relative;
   top: 0px;
   left: 0px;
+  
 }
 .board2 .days-body .days:hover{
   border-radius: 5px;
@@ -759,33 +758,32 @@ pointer-events: none;
   flex-direction: row;
   justify-content:space-evenly;
   align-items: center;
-  
+  width: 80%;
 }
 .btn2{
   background-color: rgba(3, 233, 244, 0.10);
   border-radius: 5px; 
-  font-size: 30px;
-  
+  font-size: 1.4rem;
+  letter-spacing: 3px;
 }
 .space{
-  width: 60%;
+  width: 30%;
   border: none;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
   color: #03e9f4;
-  font-size: 30px;
+  font-size: 1.3rem;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 8px;
   overflow: hidden;
   transition: 0.5s;
   font-weight:500;
+justify-content: space-between;
 }
 .today{
   background: rgba(0, 0, 0, 0.5);
-  width: 440px;
-  height: 80px;
   box-shadow: 0 5px 5px rgba(244, 3, 244, 0.6);
   padding: 12px;
   border-radius: 10px;
@@ -795,9 +793,7 @@ pointer-events: none;
   flex-direction: row;
   justify-content: space-between;
 }
-.today .moon, .days .moon, .today .moon2, .days .moon2{
-  margin-top: 10px;
-}
+
 
 .today:hover{
   border-radius: 5px;
@@ -824,6 +820,7 @@ pointer-events: none;
 }
 
 .moon {
+
   width: 50px;
   height: 50px;
   border: 2px solid #ffffff;

@@ -45,7 +45,7 @@ session_start();
 
 <center>
     <form action="index.php" method="POST">
-    <div class="div-buttons marg">
+    <div class="div-buttons marg-top-10">
         <button type="submit" class="btn btn2 marg-r" id="back" name="back"> <!--1 miesiąc -->
             <span class="s6"></span>
             <span class="s7"></span>
@@ -54,12 +54,12 @@ session_start();
         <button type="submit" class="btn btn2 marg-r" id="back2" name="back2"><!--1 rok -->
             <span class="s6"></span>
             <span class="s7"></span>
-            <b><<</b>
+            <b><<1y</b>
         </button>
         <button type="submit" class="btn btn2 marg-r" id="back3" name="back3"><!--5 lat -->
             <span class="s6"></span>
             <span class="s7"></span>
-            <b><<<</b>
+            <b><<<5y</b>
         </button>
         <div class="space form-log">
             <?php echo $cal->YearMonth($m,$cal->getVar());?><br>
@@ -74,13 +74,13 @@ session_start();
         <button type="submit" class="btn  btn2 marg-r" id="next3" name="next3"><!--5 lat -->
             <span class="s5"></span>
             <span class="s8"></span>
-            <b>>>></b>
+            <b>5y>>></b>
         </button>
         <button type="submit" class="btn  btn2 marg-r" id="next2" name="next2"><!--1 rok -->
             
             <span class="s5"></span>
             <span class="s8"></span>
-            <b>>></b>
+            <b>1y>></b>
         </button>
         <button type="submit" class="btn  btn2 marg-r" id="next" name="next"><!--1 miesiąc -->
             <span class="s5"></span>
